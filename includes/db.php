@@ -1,12 +1,12 @@
 <?php
-$host = 'localhost';
-$dbname = 'Livros';
+$host = 'meticulous-empathy.railway.internal';
+$dbname = 'railway';
 $user = 'postgres';
-$password = '24183416';
+$password = 'FlNPxxvQFTBlFDuPQIGjRKZeUTFHrOtl';
+$port = '5432';
 
 try {
-    // Adiciona o parâmetro sslmode=disable à string de conexão
-    $dsn = "pgsql:host=$host;dbname=$dbname;sslmode=disable";
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
     $pdo = new PDO($dsn, $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo 'Conexão bem-sucedida!';
